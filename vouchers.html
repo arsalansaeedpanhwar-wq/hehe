@@ -1,1 +1,15 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generated Vouchers</title>
+</head>
+<body>
+<h2>Vouchers Created</h2>
+<a href="/download">Download PDF of All Vouchers</a><br><br>
+{% for v in vouchers %}
+<p>Username: {{ v.username }} | Password: {{ v.password }}</p>
+<img src="{{ v.qr }}" width="100"><br><br>
+{% endfor %}
+<a href="/">Create More Vouchers</a>
+</body>
+</html>
